@@ -12,6 +12,7 @@ h2 {
     line-height: 42px;
     text-align: center;
     color: #070707;
+    padding: 20px 0;
 }
 
 .text-small {
@@ -27,7 +28,6 @@ h2 {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    text-align: center;
     color: #070707;
 }
 
@@ -122,12 +122,32 @@ h2 {
     }
 }
 
+.home,
+.about_me,
+.skills,
+.portfolio,
+.contacts {
+    padding-top: 122px;
+    padding-bottom: 122px;
+}
+
+.about_me,
+.portfolio {
+    background-color: #c8c8c8;
+}
+
+.container {
+    p {
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
 // Main
 
 .home {
     display: block;
     width: 100%;
-    padding-top: 122px;
 }
 
 .main-title {
@@ -146,17 +166,67 @@ h2 {
     width: 100%;
     max-height: 400px;
     overflow: hidden;
-    margin-bottom: 100px;
 }
 
 // About me
 
-.about-me {
-    background-color: #c8c8c8;
+.about_me {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .container-text {
+            width: 100%;
+            max-width: 485px;
+        }
+    }
 }
 
-section {
-    min-height: 800px;
+// Skills
+
+.logo-skills {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .skills-ramka {
+        width: 100px;
+        height: 100px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// Portfolio
+
+.portfolio-foto {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Footer
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+
+    .small-logo {
+        margin: 0 10px;
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 //  Conteiner
