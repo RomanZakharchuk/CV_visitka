@@ -173,11 +173,6 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 50px 0;
-
-    .main-languages {
-        display: flex;
-        transform: rotate(-90deg);
-    }
 }
 
 .main-foto {
@@ -209,12 +204,9 @@ h2 {
     padding: 40px 0;
 
     .skills-ramka {
-        // width: 100px;
-        // height: 100px;
-
         img {
-            width: 100%;
-            height: 100%;
+            width: 100px;
+            height: 100px;
         }
     }
 }
@@ -240,10 +232,10 @@ h2 {
         width: 40px;
         height: 40px;
 
-        img {
-            width: 100%;
-            height: 100%;
-        }
+        // img {
+        //     width: 100%;
+        //     height: 100%;
+        // }
     }
 }
 
@@ -259,6 +251,7 @@ h2 {
 /* Landscape phones and smaller */
 
 @media all and (max-width: 480px) {
+    // home
     .main-title {
         flex-wrap: wrap;
 
@@ -270,21 +263,20 @@ h2 {
             text-align: left;
             width: 90%;
         }
-
-        .main-languages {
-            display: none;
-        }
     }
+
+    // skills
     .logo-skills {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
 
     .skills-ramka {
-        width: 150px;
-        height: 150px;
-        margin: 50px;
+        width: 130px;
+        height: 130px;
+        margin: 30px 0px;
 
         img {
             width: 100%;
@@ -293,18 +285,48 @@ h2 {
     }
 }
 
-// @media all and (min-width: 768px) {
-//     .container {
-//         width: 750px;
-//     }
-// }
-// @media all and (min-width: 992px) {
-//     .container {
-//         width: 970px;
-//     }
-// }
-// @media all and (min-width: 1200px) {
-//     .container {
-//         width: 1170px;
-//     }
-// }
+/* Landscape phones and portrait tablets */
+
+@media all and (max-width: 767px) {
+    // skills
+    .logo-skills {
+        flex-wrap: wrap;
+    }
+    .skills-ramka {
+        width: 46%;
+        text-align: center;
+        margin: 30px 0px;
+
+        img {
+            max-width: 130px;
+            max-height: 130px;
+        }
+    }
+}
+
+/* Portrait tablets and small desktops */
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    // skills
+    .logo-skills {
+        flex-wrap: wrap;
+    }
+    .skills-ramka {
+        width: 26%;
+        text-align: center;
+        margin: 30px 0;
+
+        img {
+            max-width: 130px;
+            max-height: 130px;
+        }
+    }
+}
+
+/* Large desktops and laptops */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1190px;
+    }
+}
