@@ -136,10 +136,31 @@ h2 {
   color: #828282;
 }
 
+.active {
+  color: #070707 !important;
+  text-shadow: #070707 0 0 10px;
+}
+
+.flowing-scroll {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.flowing-scroll:hover {
+  color: #070707;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  text-shadow: #070707 0 0 10px;
+}
+
 .home,
 .about_me,
 .skills,
-.portfolio,
+.portfolio {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .contacts {
   padding-top: 122px;
   padding-bottom: 122px;
@@ -206,18 +227,13 @@ h2 {
 }
 
 .logo-skills {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.logo-skills .skills-ramka {
-  width: 100px;
-  height: 100px;
+  padding: 40px 0;
 }
 
 .logo-skills .skills-ramka img {
@@ -258,21 +274,42 @@ h2 {
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
+/* Landscape phones and smaller */
+@media all and (max-width: 480px) {
+  .main-title {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
+  .main-title h1 {
+    width: 90%;
   }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
+  .main-title p {
+    text-align: left;
+    width: 90%;
+  }
+  .main-title .main-languages {
+    display: none;
+  }
+  .logo-skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skills-ramka {
+    width: 150px;
+    height: 150px;
+    margin: 50px;
+  }
+  .skills-ramka img {
+    width: 100%;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
