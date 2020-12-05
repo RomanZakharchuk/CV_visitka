@@ -172,7 +172,7 @@ h2 {
 
 .main-foto {
     width: auto;
-    height: 400px;
+    max-height: 400px;
     overflow: hidden;
 }
 
@@ -341,7 +341,7 @@ h2 {
     }
 
     .home {
-        padding: 0;
+        padding-top: 0;
     }
 
     .navigation {
